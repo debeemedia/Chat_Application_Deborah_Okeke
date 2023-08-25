@@ -9,11 +9,12 @@ const message1 = document.querySelector('.message1')
 const message2 = document.querySelector('.message2')
 const button1 = document.querySelector('.button1')
 const button2 = document.querySelector('.button2')
+
+// create empty array to hold user messages
 let userMessage1 = []
 let userMessage2 = []
-// let sender1Message
-// let sender2Message
 
+// create function to save message from sender 1
 function saveMessage1 () {
     const sender1Message = {
         name: name1.value,
@@ -23,6 +24,7 @@ function saveMessage1 () {
     localStorage.setItem('sender1', JSON.stringify(userMessage1))
 }
 
+// create function to save message from sender 2
 function saveMessage2 () {
     const sender2Message = {
         name: name2.value,
@@ -32,28 +34,35 @@ function saveMessage2 () {
     localStorage.setItem('sender2', JSON.stringify(userMessage2))
 }
 
+// create function to display sender 1 message
 function displayMessage1 () {
     senderScreen1.innerHTML = ''
+    // name1.value = ''
+    // message1.value = ''
     for (let message of userMessage2) {
         const senderName = message.name
         const senderMessage = message.message
         const displayDiv = document.createElement('div')
         displayDiv.innerText = `${senderName}: ${senderMessage}`
-        senderScreen1.append(displayDiv)
+        senderScreen1.prepend(displayDiv)
     }
 }
 
+// create function to display sender 2 message
 function displayMessage2 () {
     senderScreen2.innerHTML = ''
+    // name2.value = ''
+    // message2.value = ''
     for (let message of userMessage1) {
         const senderName = message.name
         const senderMessage = message.message
         const displayDiv = document.createElement('div')
         displayDiv.innerText = `${senderName}: ${senderMessage}`
-        senderScreen2.append(displayDiv)
+        senderScreen2.prepend(displayDiv)
     }
 }
 
+// add event listener on form 1
 form1.addEventListener('submit', (e) => {
     e.preventDefault()
     // form1.reset()
@@ -61,6 +70,7 @@ form1.addEventListener('submit', (e) => {
     displayMessage2()
 })
 
+// add event listener on form 2
 form2.addEventListener('submit', (e) => {
     e.preventDefault()
     // form2.reset()
@@ -68,6 +78,7 @@ form2.addEventListener('submit', (e) => {
     displayMessage1()
 })
 
+// check if localStorage contains any messages when loading the page
 if (localStorage.getItem('sender1')) {
     userMessage1 = JSON.parse(localStorage.getItem('sender1'))
 }
