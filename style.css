@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Lato, sans-serif;
+}
+
+header {
+    background-color: #5c5c5c;
+    color: #e4e1e1;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.sender1 {
+    margin-bottom: 50px;
+}
+
+main {
+    margin: 0 auto 100px;
+    padding: 20px 0 100px;
+}
+
+.screen {
+    height: 200px;
+    width: 300px;
+    background-color: #e4e1e1;
+    border-radius: 12px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 50px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input,
+textarea {
+    margin: 5px 0;
+    background-color: #e4e1e1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: Lato, sans-serif;
+}
+
+button {
+    width: 100px;
+    padding: 5px 10px;
+    background-color: #e4e1e1;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-family: Lato, sans-serif;
+}
+
+button:hover{
+    color: #e4e1e1;
+    background-color: #5c5c5c;
+
+}
+
+footer {
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/********** MEDIA QUERIES **********/
+
+@media screen and (width >= 767px) {
+    main {
+        display: flex;
+        gap: 20px;
+    }
+
+    .sender1 {
+        margin-bottom: initial;
+    }
+}
