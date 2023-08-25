@@ -37,8 +37,6 @@ function saveMessage2 () {
 // create function to display sender 1 message
 function displayMessage1 () {
     senderScreen1.innerHTML = ''
-    // name1.value = ''
-    // message1.value = ''
     for (let message of userMessage2) {
         const senderName = message.name
         const senderMessage = message.message
@@ -51,8 +49,6 @@ function displayMessage1 () {
 // create function to display sender 2 message
 function displayMessage2 () {
     senderScreen2.innerHTML = ''
-    // name2.value = ''
-    // message2.value = ''
     for (let message of userMessage1) {
         const senderName = message.name
         const senderMessage = message.message
@@ -65,7 +61,6 @@ function displayMessage2 () {
 // add event listener on form 1
 form1.addEventListener('submit', (e) => {
     e.preventDefault()
-    // form1.reset()
     saveMessage1()
     displayMessage2()
 })
@@ -73,7 +68,6 @@ form1.addEventListener('submit', (e) => {
 // add event listener on form 2
 form2.addEventListener('submit', (e) => {
     e.preventDefault()
-    // form2.reset()
     saveMessage2()
     displayMessage1()
 })
