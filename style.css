@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: auto;
+}
+
+.screen {
+    height: 200px;
+    width: 400px;
+    border: 1px solid black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 50px;
+    margin: 5px 0;
+}
+
+textarea {
+    height: 100px;
+    margin: 5px 0;
+}
